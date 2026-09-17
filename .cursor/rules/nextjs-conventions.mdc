@@ -1,0 +1,12 @@
+---
+description: Convenciones estrictas para el desarrollo del proyecto en Next.js
+globs: *.ts, *.tsx
+---
+# Reglas de Gobernanza y Desarrollo
+
+- **Lenguaje**: Utiliza TypeScript de manera estricta. Prohibido el uso de `any`.
+- **Framework**: Utiliza Next.js 15+ con App Router.
+- **Componentes**: Genera siempre Server Components por defecto. Usa `"use client"` únicamente en la primera línea del archivo si el componente requiere hooks de estado (`useState`, `useEffect`) o interactividad del usuario.
+- **Estilos**: Utiliza exclusivamente Tailwind CSS para el estilado.
+- **Nomenclatura**: PascalCase para componentes (ej. `Contador.tsx`) y camelCase para variables y funciones.
+- **Testing**: Al solicitar pruebas, utiliza Vitest y React Testing Library simulando un enfoque TDD (Test-Driven Development).

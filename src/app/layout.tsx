@@ -23,7 +23,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <nav className="border-b border-zinc-200 bg-white px-6 py-4 dark:border-zinc-800 dark:bg-zinc-950">
+          <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+            Práctica Integradora IA
+          </h1>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
